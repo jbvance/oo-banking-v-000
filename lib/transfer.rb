@@ -31,6 +31,8 @@ class Transfer
       @sender.deposit(@amount)
       @receiver.balance = @receiver.balance - @amount
       @status = 'reversed'
+    else
+      return "Can only reverse completed transfers"
     end
   end
 
